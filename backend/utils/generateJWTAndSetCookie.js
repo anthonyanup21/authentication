@@ -14,7 +14,7 @@ export const generateJWTAndSetCookie=(res,id)=>{
         httpOnly: true,      //  prevents xss attack
         secure: process.env.ENV=="production",        // only sent over HTTPS (set false for localhost)
         sameSite: "strict",  // prevents CSRF
-        maxAge: 24 * 60 * 60 * 1000 // 1 day
+        maxAge: 7*24 * 60 * 60 * 1000 // 7 day
     })
 
 }
